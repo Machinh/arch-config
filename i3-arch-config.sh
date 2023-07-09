@@ -2,7 +2,7 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm
-
+setxkbmap -model abnt2 -layout br
 sudo pacman -S --noconfirm i3-gaps i3status i3lock dmenu feh
 
 sudo pacman -S --noconfirm xorg xorg-xinit xorg-server
