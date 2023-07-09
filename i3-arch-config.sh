@@ -2,22 +2,20 @@
 #!/bin/bash
 
 sudo pacman -Syu --noconfirm
+
 setxkbmap -model abnt2 -layout br
+
 sudo pacman -S --noconfirm i3-gaps i3status i3lock dmenu feh
 
 sudo pacman -S --noconfirm xorg xorg-xinit xorg-server
 
 sudo pacman -S --noconfirm picom rofi rxvt-unicode thunar lxappearance-gtk3
 
-sudo pacman -S --noconfirm polybar
+WALLPAPER_PATH="./wallpaper.jpg"
 
-mkdir -p ~/.config/polybar
-cp /usr/share/doc/polybar/config ~/.config/polybar/
-nano ~/.config/polybar/config
+WALLPAPER_COMMAND="feh --bg-fill $WALLPAPER_PATH"
 
-mv LAIN.jpg ~/.LAIN.jpg
-
-feh --bg-fill ~/.LAIN.jpg
+$WALLPAPER_COMMAND
 
 sudo pacman -S --noconfirm gnome-terminal nmap nano
 
